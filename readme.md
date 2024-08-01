@@ -45,3 +45,34 @@ Você pode acessar o pgAdmin através do seu navegador na URL http://localhost:5
 ## Observações
 Certifique-se de que o Docker e o Docker Compose estão instalados e funcionando corretamente em sua máquina.
 Os arquivos de configuração do Docker e do PostgreSQL estão localizados na raiz do projeto.
+
+# Configuração do pgAdmin para Conectar ao Banco de Dados PostgreSQL
+
+Após iniciar os containers usando o Docker Compose, você pode conectar o pgAdmin ao banco de dados PostgreSQL seguindo estes passos:
+
+1. **Acesse o pgAdmin:**
+Abra seu navegador e vá para http://localhost:5050 para acessar a interface do pgAdmin.
+
+2. **Faça login no pgAdmin::**
+Utilize o e-mail e a senha configurados no docker-compose.yml para fazer login:
+
+- E-mail: admin@example.com
+- Senha: admin
+
+3. **Adicione o servidor PostgreSQL no pgAdmin**
+- No painel do pgAdmin, clique em "Servers" (Servidores) no painel à esquerda.
+- Clique com o botão direito em "Servers" e selecione "Create" > "Server" (Criar > Servidor).
+
+4. **Configuração do Servidor:**
+- Na aba "General" (Geral):
+   - Name (Nome): Dê um nome ao servidor, como "My Postgres database".
+- Na aba "Connection" (Conexão):
+      - Host name/address: postgres 
+      - Port: 5432
+      - Maintenance database: service-database 
+      - Username: postgres
+      - Password: secret
+
+5. **Salvar e conectar:**
+- Clique em "Save" (Salvar). O pgAdmin tentará se conectar ao servidor PostgreSQL. Se a configuração estiver correta, você verá seu banco de dados na árvore de objetos à esquerda.
+
