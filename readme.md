@@ -31,13 +31,15 @@ Esse comando irá construir a imagem Docker e iniciar os containers necessários
 
 ## Processamento dos Dados
 
-O arquivo localizado na pasta row será processado automaticamente. Após a conclusão do processo de ETL, um arquivo contendo apenas os dados válidos será gerado.
+O arquivo localizado na pasta row será processado automaticamente. Após a conclusão do processo de ETL, um arquivo contendo apenas os dados válidos será gerado e será salvo na pasta ready. Esse arquivo não terá dados nulos o qualquer número de CPF ou CNPJ inválido.
 
 ## Acesso ao PostgreSQL
 Para consultar os dados e as informações geradas na base de dados, acesse o container do pgAdmin com as seguintes credenciais:
 
 Usuário: admin@example.com
+
 Senha: admin
+
 Você pode acessar o pgAdmin através do seu navegador na URL http://localhost:5050/login?next=/.
 
 ## Observações
