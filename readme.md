@@ -67,11 +67,11 @@ Utilize o e-mail e a senha configurados no docker-compose.yml para fazer login:
 - Na aba "General" (Geral):
    - Name (Nome): Dê um nome ao servidor, como "My Postgres database".
 - Na aba "Connection" (Conexão):
-      - Host name/address: postgres 
-      - Port: 5432
-      - Maintenance database: service-database 
-      - Username: postgres
-      - Password: secret
+   - Host name/address: postgres 
+   - Port: 5432
+   - Maintenance database: service-database 
+   - Username: postgres
+   - Password: secret
 
 5. **Salvar e conectar:**
 - Clique em "Save" (Salvar). O pgAdmin tentará se conectar ao servidor PostgreSQL. Se a configuração estiver correta, você verá seu banco de dados na árvore de objetos à esquerda.
