@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: "etl_pipeline"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: "postgres:latest"
+    environment:
+      - POSTGRES_DB=service-database
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secret
+    container_name: "database"
+    ports:
+      - 5433:5432
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: "database-pgadmin"
+    depends_on:
+      - postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"

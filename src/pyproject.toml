@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "etl-pipelines"
+version = "0.1.0"
+description = "etl pipeline project"
+authors = ["davidsoarez <70529559+davidsoarez@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+pytest = "^8.3.2"
+pytest-cov = "^5.0.0"
+alembic = "^1.13.2"
+sqlalchemy = "^2.0.31"
+pydantic = "^2.8.2"
+aiologger = "^0.7.0"
+numpy = "^2.0.1"
+pandas = "^2.2.2"
+asyncpg = "^0.29.0"
+openpyxl = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
